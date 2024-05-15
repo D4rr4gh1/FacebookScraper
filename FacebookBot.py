@@ -68,7 +68,7 @@ class FacebookBot():
         foundPosts = []
         for post in soup.find_all("div", {"class" : "xdj266r x11i5rnm xat24cr x1mh8g0r x1vvkbs"}):
             text = post.get_text().lower()
-            if "leeds" in text and "ball" in text and "selling" in text:
+            if "leeds" in text and "ball" in text:
                 foundPosts.append(post.get_text())
 
         self.saveResults(foundPosts)
